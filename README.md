@@ -1,71 +1,53 @@
-💬 Watsonx.ai Chatbot
-This project is a Python-based chatbot powered by IBM Watsonx.ai. It demonstrates how to integrate IBM’s Generative AI capabilities into a simple interactive console application.
+# Watsonx.ai Project Template
 
-🚀 Features
-Connects to IBM Watsonx.ai.
+This repository contains a Python script to connect and interact with the **Watsonx.ai** platform using IBM's `ibm-watsonx-ai` SDK.
 
-Uses a powerful LLM for conversation (e.g., from the Mistral family).
+## 📌 Features
+- Connect to Watsonx.ai using API key authentication.
+- Specify and use your Watsonx.ai project ID and instance URL.
+- Ready to be extended for your own AI workflows.
 
-Accepts user input and generates AI-powered responses.
+## 📂 Files
+- `main.py` → The main script to connect to Watsonx.ai.
+- `requirements.txt` → Dependencies required to run the script.
 
-Easy to configure with your own Watsonx credentials.
+## 🔧 Setup Instructions
 
-🛠 Requirements
-Before running this project, ensure you have:
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
 
-Python 3.8 or above
-
-An IBM Cloud account
-
-Access to Watsonx.ai
-
-Installed dependencies from requirements.txt
-
-📦 Installation
-1. Clone this repository
-
-Bash
-
-git clone https://github.com/your-username/watsonx-chatbot.git
-cd watsonx-chatbot
-2. Install dependencies
-
-Bash
-
+### 2️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
-3. Configure your credentials
+```
 
-Replace the placeholder values in app.py with your own:
-
-Python
-
+### 3️⃣ Configure Environment Variables
+Replace the placeholders in `main.py` with your Watsonx.ai details:
+```python
 url = "YOUR_WATSONX_URL"
 project_id = "YOUR_PROJECT_ID"
-api_key = "YOUR_API_KEY"
-▶️ Usage
-Run the chatbot from your terminal:
+```
 
-Bash
+You will also need your **IBM Cloud API Key**. Store it securely as an environment variable:
+```bash
+export IBM_CLOUD_API_KEY="your_api_key_here"   # For Linux/Mac
+set IBM_CLOUD_API_KEY="your_api_key_here"     # For Windows
+```
 
-python app.py
-Example Interaction:
+### 4️⃣ Run the Script
+```bash
+python main.py
+```
 
-Makefile
+## 🛡️ Security Notice
+- **Never** commit your API key or credentials to the repository.
+- Always use `.gitignore` to avoid uploading sensitive files.
 
-You: Hello!
-Bot: Hi there! How can I assist you today?
-📂 Project Structure
-Bash
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-watsonx-chatbot/
-│
-├── app.py              # Main chatbot code
-├── requirements.txt    # Required Python packages
-└── README.md           # Project documentation
-⚠️ Security Notes
-Never commit your real API key or credentials to GitHub.
-
-Use environment variables for sensitive information when deploying this application publicly.
-
-📜 License
-This project is licensed under the MIT License. You are free to use and modify it.
+---
+💡 *Tip:* This is just a starting template. You can expand this project by adding Watsonx.ai model training, inference, and data management code.
